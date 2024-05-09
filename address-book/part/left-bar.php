@@ -37,7 +37,7 @@ if (!isset($pageName))
             </h2>
             <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
               <div class="accordion-body p-0"> <!-- p-0 把li上下左右的空間清掉不要動-->
-                <li class="li-hover"><a class="dropdown-item py-3 border  " href="#">增加會員資料</a></li>
+                <li class="li-hover"><a class="dropdown-item py-3 border <?= $pageName == 'add' ? 'active' : '' ?> " href="add.php">增加會員資料</a></li>
                 <li class="li-hover"><a class="dropdown-item py-3 border" href="#">刪除會員資料</a></li>
                 <li class="li-hover"><a class="dropdown-item py-3 border" href="#">編輯會員資料</a></li>
                 <li class="li-hover"><a class="dropdown-item py-3 border <?= $pageName == 'list' ? 'active' : '' ?>" href="list.php">查詢會員資料</a></li>

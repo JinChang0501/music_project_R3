@@ -16,13 +16,6 @@ $pageName = 'login';
 <?php include __DIR__ . "/part/html-header.php"; ?>
 <?php include __DIR__ . "/part/navbar-head.php"; ?>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-2 p-0">
-      <?php include __DIR__ . "/part/left-bar.php"; ?></div>
-  </div>
-</div>
-
 
 <style>
   form .mb-3 .form-text {
@@ -31,27 +24,31 @@ $pageName = 'login';
   }
 </style>
 
-<div class="container">
-  <div class="card mt-5" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">帳號登入</h5>
-      <form name="form1" onsubmit="sendData(event)">
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="text" class="form-control" id="email" name="email">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2 p-0">
+      <?php include __DIR__ . "/part/left-bar.php"; ?>
+    </div>
+    <div class="col-10">
+      <div class="card mt-5" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">帳號登入</h5>
+          <form name="form1" onsubmit="sendData(event)">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="text" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">密碼</label>
+              <input type="password" class="form-control" id="password" name="passwords">
+            </div>
+            <button type="submit" class="btn btn-primary">登入</button>
+          </form>
         </div>
-
-        <div class="mb-3">
-          <label for="password" class="form-label">密碼</label>
-          <input type="password" class="form-control" id="password" name="passwords">
-        </div>
-
-        <button type="submit" class="btn btn-primary">登入</button>
-      </form>
+      </div>
     </div>
   </div>
 </div>
-
 <!-- Modal Start-->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
