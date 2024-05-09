@@ -12,7 +12,7 @@ $pageName = 'add-employees';
 
 
 <?php include __DIR__ . "/part/html-header.php"; ?>
-<?php include __DIR__ . "/part/navbar.php"; ?>
+<?php include __DIR__ . "/part/navbar-head.php"; ?>
 
 <style>
   form .mb-3 .form-text {
@@ -20,48 +20,52 @@ $pageName = 'add-employees';
     font-weight: 800;
   }
 </style>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2"><?php include __DIR__ . "/part/left-bar.php"; ?></div>
+    <div class="col-10">
+      <div class="card mt-5" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">新增員工資料</h5>
+          <form name="form1" onsubmit="sendData(event)">
+            <div class="mb-3">
+              <label for="fname" class="form-label">名字(First_name)</label>
+              <input type="text" class="form-control" id="fname" name="first_name">
+              <div class="form-text"></div>
+            </div>
 
-<div class="container">
-  <div class="card mt-5" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">新增員工資料</h5>
-      <form name="form1" onsubmit="sendData(event)">
-        <div class="mb-3">
-          <label for="fname" class="form-label">名字(First_name)</label>
-          <input type="text" class="form-control" id="fname" name="first_name">
-          <div class="form-text"></div>
+            <div class="mb-3">
+              <label for="lname" class="form-label">姓氏(Last_name)</label>
+              <input type="text" class="form-control" id="lname" name="last_name">
+              <div class="form-text"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email">
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="passwords">
+            </div>
+
+            <div class="mb-3">
+              <label for="gender" class="form-label">性別</label><br>
+              <input type="radio" name="gender" value="male">男
+              <input type="radio" name="gender" value="female">女
+            </div>
+
+            <div class="mb-3">
+              <label for="mobile" class="form-label">電話號碼</label>
+              <input type="text" class="form-control" id="mobile" name="phone_number">
+              <div class="form-text"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">新增</button>
+          </form>
         </div>
-
-        <div class="mb-3">
-          <label for="lname" class="form-label">姓氏(Last_name)</label>
-          <input type="text" class="form-control" id="lname" name="last_name">
-          <div class="form-text"></div>
-        </div>
-
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="email">
-        </div>
-
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" name="passwords">
-        </div>
-
-        <div class="mb-3">
-          <label for="gender" class="form-label">性別</label><br>
-          <input type="radio" name="gender" value="male">男
-          <input type="radio" name="gender" value="female">女
-        </div>
-
-        <div class="mb-3">
-          <label for="mobile" class="form-label">電話號碼</label>
-          <input type="text" class="form-control" id="mobile" name="phone_number">
-          <div class="form-text"></div>
-        </div>
-
-        <button type="submit" class="btn btn-primary">新增</button>
-      </form>
+      </div>
     </div>
   </div>
 </div>

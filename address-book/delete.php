@@ -2,6 +2,9 @@
 require __DIR__ . "/admin-required.php";
 require __DIR__ . '/../config/pdo-connect.php';
 
+$title = '刪除會員資料';
+$pageName = 'delete_member';
+
 $sid = isset($_GET['sid']) ? intval($_GET['sid']) : 0;
 if ($sid < 1) {
     header('Location: list.php');

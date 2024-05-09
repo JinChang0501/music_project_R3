@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
 
 
 $title = '通訊錄列表';
-$pageName = 'list-no-admin-members';
+$pageName = 'list';
 
 require __DIR__ . './../config/pdo-connect.php';
 

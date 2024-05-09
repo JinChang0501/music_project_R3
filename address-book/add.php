@@ -6,7 +6,7 @@ if (!isset($_SESSION)) {
 }
 
 
-$title = '新增列表';
+$title = '新增會員';
 $pageName = 'add';
 ?>
 
