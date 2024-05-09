@@ -3,7 +3,7 @@ if (!isset($_SESSION)) {
   session_start();
 }
 if (isset($_SESSION['admin'])) {
-  header('Location: index_.php');
+  header('Location: index_R3.php');
   exit;
 }
 
@@ -110,7 +110,7 @@ $pageName = 'login';
         .then(data => {
           console.log(data);
           if (data.success) {
-            location.href = 'index_.php';
+            location.href = 'index_R3.php'; //登入成功後跳轉頁面
           } else {
             myModal.show();
           }

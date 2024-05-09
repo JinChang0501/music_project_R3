@@ -26,7 +26,7 @@ if (!isset($pageName))
 <div class="container-fluid p-0">
   <div class="row m-0">
     <div class="col-2 bg-primary py-3">
-      <div class="logo mx-auto">
+      <div class="logo mx-auto w-100">
         <img src="" alt="">
       </div>
     </div>
