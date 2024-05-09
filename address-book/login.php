@@ -81,7 +81,6 @@ $pageName = 'login';
     return re.test(email);
   }
 
-
   const sendData = e => {
     e.preventDefault(); // 不要讓 form1 以傳統的方式送出
 
@@ -106,6 +105,7 @@ $pageName = 'login';
         }).then(r => r.json())
         .then(data => {
           console.log(data);
+
           if (data.success) {
             location.href = 'index_R3.php'; //登入成功後跳轉頁面
           } else {
